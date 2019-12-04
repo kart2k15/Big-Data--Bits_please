@@ -5,5 +5,8 @@ Cheng Shi --cs5615@nyu.edu
 Xue Xia -- xx859@nyu.edu
 Kartikeya Shukla -- ks5173@nyu.edu
 
+# Task 3 Notebook with Interactive Plots
+https://chart-studio.plot.ly/~Alex23_shi/18/plotly-analysis-on-the-filtered-311-data/#/
+
 # Plotly Directory
 https://chart-studio.plot.ly/~Alex23_shi
