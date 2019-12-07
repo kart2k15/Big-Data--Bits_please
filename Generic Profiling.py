@@ -186,7 +186,7 @@ for file in filelist1:
     json_file_path=file.split('.')[0]
     print('Processed '+ str(c)+' file')
     c=c+1
-    json_file_path='Results_JSON/'+ json_file_path
+    json_file_path='Results_JSON/'+ json_file_path+ '.json'
     with open(json_file_path, 'w', newline='\n') as json_file:
         json.dump(DF_dict, json_file)
         for Dict in col_dicts:
