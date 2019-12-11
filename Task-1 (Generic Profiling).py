@@ -30,7 +30,7 @@ with open('NYCOpenData/datasets.tsv') as csvfile:
         filelist1.append(row[0]+'.tsv.gz')
 
 filelist.remove('datasets.tsv')
-filelist1=filelist1[580:]
+
 def count_not_null(c, nan_as_null=False):
     pred = F.col(c).isNotNull() & (~isnan(c) if nan_as_null else F.lit(True))
     return F.sum(pred.cast("integer")).alias(c)
@@ -69,7 +69,8 @@ get_date=F.udf(lambda x: check_date(x), D.StringType())
 get_str_int=F.udf(lambda x: str_to_int(x), D.IntegerType())
 get_str_float=F.udf(lambda x: str_to_float(x), D.FloatType())
 
-print('files left = ', len(filelist1)) 
+print('files left = ', len(filelist1))
+filelist1.remove('xzy8-qqgf')
 for file in filelist1:
     filepath='/user/hm74/NYCOpenData/'+file.lower()+'.tsv.gz'
     DF = spark.read.format('csv').options(header='true',inferschema='true').option("delimiter", "\t").load(filepath)
