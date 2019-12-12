@@ -10,3 +10,10 @@ https://chart-studio.plot.ly/~Alex23_shi/18/plotly-analysis-on-the-filtered-311-
 
 # Plotly Directory
 https://chart-studio.plot.ly/~Alex23_shi
+
+# Requirements
+Spark 2.4.0
+Python 3.6.5
+Pandas 
+Modin
+Plotly
